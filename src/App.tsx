@@ -2,8 +2,11 @@ import { Navigation } from 'components/Navigation';
 import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import { ViewsConfig } from 'utils/config/views.config';
+import Amplify from 'aws-amplify';
+import { awsConfig } from './utils/config/aws.config';
 
 const App: React.FC = () => {
+    Amplify.configure(awsConfig);
 
     return (
         <HashRouter>
